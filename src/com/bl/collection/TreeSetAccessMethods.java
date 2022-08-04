@@ -10,6 +10,7 @@ public class TreeSetAccessMethods {
 		set.add("C");
 		set.add("D");
 		set.add("E");
+//		explicitly mentioned 
 		System.out.println("Initial Set: " + set);
 
 		System.out.println("Reverse Set: " + set.descendingSet());
@@ -19,6 +20,16 @@ public class TreeSetAccessMethods {
 		System.out.println("SubSet: " + set.subSet("A", false, "E", true));
 
 		System.out.println("TailSet: " + set.tailSet("C", false));
+		
+//		default taken by jvm
+
+		System.out.println("Intial Set: " + set);
+
+		System.out.println("Head Set: " + set.headSet("C"));// false
+
+		System.out.println("SubSet: " + set.subSet("A", "E"));// true, false
+
+		System.out.println("TailSet: " + set.tailSet("C"));// true
 	}
 
 }
